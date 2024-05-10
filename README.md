@@ -3,7 +3,7 @@
 go-jq is a distribution of [jq][1], that can be built with Go. It does not actually reimplement any
 functionality of jq in Go, instead compiling the original source to WebAssembly, and 
 executing with the pure Go Wasm runtime [wazero][2]. This means that `go install` or `go run`
-can be used to execute it, with no need to rely on separate package managers such as pnpm,
+can be used to execute it, with no need to rely on separate package managers such as homebrew,
 on any platform that Go supports.
 
 Note that there is an excellent Go port of jq, [gojq][3]. It has some small differences from upstream,
