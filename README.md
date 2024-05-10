@@ -7,7 +7,7 @@ can be used to execute it, with no need to rely on separate package managers suc
 on any platform that Go supports.
 
 Note that there is an excellent Go port of jq, [gojq][3]. It has some small differences from upstream,
-so this library may be appropriate where those come into play. It also intends to be a case study
+so this version may be appropriate where those come into play. It also intends to be a case study
 on bringing tools to Go without a significant rewrite.
 
 ## Installation
@@ -22,8 +22,11 @@ $ go install github.com/wasilibs/go-jq/cmd/jq@latest
 To avoid installation entirely, it can be convenient to use `go run`
 
 ```bash
-$ echo '{"foo": 0}' go run github.com/wasilibs/go-jq/cmd/jq@latest
+$ echo '{"foo": 0}' | go run github.com/wasilibs/go-jq/cmd/jq@latest
 ```
+
+Note that jq is generally used for very small operations, so the overhead of `go run` will often be
+noticable.
 
 Note that due to the sandboxing of the filesystem when using Wasm, currently only files that descend
 from the current directory when executing the tool are accessible to it, i.e., `../sql/my.json` or
