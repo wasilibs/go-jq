@@ -7,8 +7,8 @@ import (
 
 func main() {
 	tasks.Define(tasks.Params{
-		LibraryName: "protoc",
-		LibraryRepo: "protocolbuffers/protobuf",
+		LibraryName: "jq",
+		LibraryRepo: "jqlang/jq",
 		GoReleaser:  true,
 	})
 	boot.Main()
